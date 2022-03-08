@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/drawable/bg_home_filter_unselected.xml" value="0.111" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/drawable/home_filter_bg.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/drawable/home_filter_selected_bg.xml" value="0.111" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/drawable/ic_home.xml" value="0.111" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/drawable/icon_home.xml" value="0.111" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/drawable/item_selector.xml" value="0.1" />
@@ -12,6 +15,8 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/layout/fragment_message.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/layout/fragment_profile.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/layout/fragment_search.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/layout/item_filter_view.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/layout/item_post_home_view.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/menu/item_menu.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.111" />
       </map>
