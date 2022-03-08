@@ -5,15 +5,12 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.MenuItem
-import android.view.WindowManager
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.imageview.ShapeableImageView
 import com.wonmirzo.R
 import com.wonmirzo.fragment.HomeFragment
-import com.wonmirzo.fragment.MessageFragment
+import com.wonmirzo.fragment.message.MessageFragment
 import com.wonmirzo.fragment.ProfileFragment
 import com.wonmirzo.fragment.SearchFragment
 
