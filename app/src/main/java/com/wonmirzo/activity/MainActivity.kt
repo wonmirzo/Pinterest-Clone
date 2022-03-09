@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportFragmentManager.beginTransaction().replace(R.id.flFragment, HomeFragment()).commit()
         initViews()
     }
 
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
         Handler(Looper.getMainLooper()).postDelayed({
             notificationSetup(R.id.navMessage, 7)
-        }, 2000)
+        }, 1000)
         bottomNavigationView.setOnItemSelectedListener { item ->
             selectItem(item)
         }

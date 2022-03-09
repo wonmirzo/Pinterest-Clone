@@ -86,18 +86,10 @@ class HomeFragment : Fragment() {
         )
         posts.add(
             HomePost(
-                "https://images.unsplash.com/photo-1646629141074-c427d061336c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
-                ""
-            )
-        )
-        posts.add(
-            HomePost(
                 "https://images.unsplash.com/photo-1646639138820-54404ddb351b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
                 ""
             )
         )
-
-
         return posts
     }
 

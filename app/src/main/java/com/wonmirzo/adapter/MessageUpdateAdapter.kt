@@ -10,22 +10,20 @@ import com.bumptech.glide.Glide
 import com.google.android.material.imageview.ShapeableImageView
 import com.wonmirzo.R
 import com.wonmirzo.model.MessageUpdates
-import com.wonmirzo.model.SearchIdeas
-import com.wonmirzo.model.SearchPopular
 
-class MessageUpdatesAdapter(
+class MessageUpdateAdapter(
     private var context: Context,
     private var updates: List<MessageUpdates>
 ) :
-    RecyclerView.Adapter<MessageUpdatesAdapter.VH>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageUpdatesAdapter.VH {
+    RecyclerView.Adapter<MessageUpdateAdapter.VH>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageUpdateAdapter.VH {
         return VH(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_message_updates_view, parent, false)
         )
     }
 
-    override fun onBindViewHolder(holder: MessageUpdatesAdapter.VH, position: Int) {
+    override fun onBindViewHolder(holder: MessageUpdateAdapter.VH, position: Int) {
         val update = updates[position]
 
         val ivPhoto = holder.ivPhoto

@@ -7,9 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.wonmirzo.R
 import com.wonmirzo.adapter.MessageChatAdapter
-import com.wonmirzo.adapter.MessageUpdatesAdapter
 import com.wonmirzo.model.MessageChats
-import com.wonmirzo.model.MessageUpdates
 
 class ChatFragment : Fragment(R.layout.fragment_chat) {
     private lateinit var recyclerView: RecyclerView

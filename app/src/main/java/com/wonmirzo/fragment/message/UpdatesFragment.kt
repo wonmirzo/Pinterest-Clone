@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.wonmirzo.R
-import com.wonmirzo.adapter.MessageUpdatesAdapter
+import com.wonmirzo.adapter.MessageUpdateAdapter
 import com.wonmirzo.model.MessageUpdates
 
 class UpdatesFragment : Fragment(R.layout.fragment_updates) {
@@ -21,7 +21,7 @@ class UpdatesFragment : Fragment(R.layout.fragment_updates) {
     }
 
     private fun refreshAdapter(updates: List<MessageUpdates>) {
-        val adapter = MessageUpdatesAdapter(requireContext(), updates)
+        val adapter = MessageUpdateAdapter(requireContext(), updates)
         recyclerView.adapter = adapter
     }
 

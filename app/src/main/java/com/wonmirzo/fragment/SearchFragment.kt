@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.wonmirzo.R
-import com.wonmirzo.adapter.SearchIdeasAdapter
+import com.wonmirzo.adapter.SearchIdeaAdapter
 import com.wonmirzo.adapter.SearchPopularAdapter
 import com.wonmirzo.model.SearchIdeas
 import com.wonmirzo.model.SearchPopular
@@ -37,7 +37,7 @@ class SearchFragment : Fragment() {
     }
 
     private fun refreshIdeasAdapter(ideas: List<SearchIdeas>) {
-        val adapter = SearchIdeasAdapter(requireContext(), ideas)
+        val adapter = SearchIdeaAdapter(requireContext(), ideas)
         rvSearchIdeas.adapter = adapter
     }
 

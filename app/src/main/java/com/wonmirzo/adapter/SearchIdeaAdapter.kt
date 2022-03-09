@@ -11,16 +11,16 @@ import com.google.android.material.imageview.ShapeableImageView
 import com.wonmirzo.R
 import com.wonmirzo.model.SearchIdeas
 
-class SearchIdeasAdapter(private var context: Context, private var ideas: List<SearchIdeas>) :
-    RecyclerView.Adapter<SearchIdeasAdapter.VH>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchIdeasAdapter.VH {
+class SearchIdeaAdapter(private var context: Context, private var ideas: List<SearchIdeas>) :
+    RecyclerView.Adapter<SearchIdeaAdapter.VH>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchIdeaAdapter.VH {
         return VH(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_search_ideas_view, parent, false)
         )
     }
 
-    override fun onBindViewHolder(holder: SearchIdeasAdapter.VH, position: Int) {
+    override fun onBindViewHolder(holder: SearchIdeaAdapter.VH, position: Int) {
         val idea = ideas[position]
 
         val ivPhoto = holder.ivPhoto
