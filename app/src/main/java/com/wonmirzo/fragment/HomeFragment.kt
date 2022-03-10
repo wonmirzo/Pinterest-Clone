@@ -14,7 +14,12 @@ import com.wonmirzo.adapter.HomeFilterAdapter
 import com.wonmirzo.adapter.HomePostAdapter
 import com.wonmirzo.helper.SpacesItemDecoration
 import com.wonmirzo.model.HomeFilter
-import com.wonmirzo.model.HomePost
+import com.wonmirzo.network.RetrofitHttp
+import com.wonmirzo.network.model.HomePost
+import com.wonmirzo.utils.Logger
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class HomeFragment : Fragment() {
     private lateinit var rvFilterHome: RecyclerView
@@ -33,13 +38,14 @@ class HomeFragment : Fragment() {
         (rvFilterHome.itemAnimator as SimpleItemAnimator).supportsChangeAnimations = false
 
         rvPostHome = view.findViewById(R.id.rvPostHome)
+        rvPostHome.setHasFixedSize(true)
         rvPostHome.layoutManager =
-            StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+            StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         val decoration = SpacesItemDecoration(10)
         rvPostHome.addItemDecoration(decoration)
 
         refreshFilterAdapter(getAllFilters())
-        refreshPostAdapter(getAllPosts())
+        apiPhotoList()
 
         return view
     }
@@ -49,7 +55,7 @@ class HomeFragment : Fragment() {
         rvFilterHome.adapter = adapter
     }
 
-    private fun refreshPostAdapter(posts: List<HomePost>) {
+    private fun refreshPostAdapter(posts: ArrayList<HomePost>) {
         val adapter = HomePostAdapter(requireContext(), posts)
         rvPostHome.adapter = adapter
     }
@@ -64,33 +70,31 @@ class HomeFragment : Fragment() {
         return filters
     }
 
-    private fun getAllPosts(): List<HomePost> {
-        val posts = ArrayList<HomePost>()
-        posts.add(
-            HomePost(
-                "https://images.unsplash.com/photo-1640622299485-7fef00b3dc24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-                ""
-            )
-        )
-        posts.add(
-            HomePost(
-                "https://images.unsplash.com/photo-1646518168341-d674899c5254?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-                ""
-            )
-        )
-        posts.add(
-            HomePost(
-                "https://images.unsplash.com/photo-1646590637876-af1293d75122?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-                ""
-            )
-        )
-        posts.add(
-            HomePost(
-                "https://images.unsplash.com/photo-1646639138820-54404ddb351b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
-                ""
-            )
-        )
-        return posts
+    private fun apiPhotoList() {
+        RetrofitHttp.posterService.listPost().enqueue(object : Callback<List<HomePost>> {
+            override fun onResponse(
+                call: Call<List<HomePost>>,
+                response: Response<List<HomePost>>
+            ) {
+                if (!response.isSuccessful) {
+                    Logger.e("@@@", "Code: ${response.code()}")
+                    return
+                }
+                posts.clear()
+                posts.addAll(response.body()!!)
+                refreshPostAdapter(posts)
+
+                Logger.d("@@@", "r: " + response.body()!!.size.toString())
+            }
+
+            override fun onFailure(call: Call<List<HomePost>>, t: Throwable) {
+                Logger.e("@@@", "error ${t.message}")
+            }
+        })
     }
 
+    companion object {
+        val posts = ArrayList<HomePost>()
+
+    }
 }

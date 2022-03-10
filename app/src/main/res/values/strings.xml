@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Pinterest Clone</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="search">Search</string>
     <string name="ideas_for_you">Ideas for you</string>
     <string name="popular_on_pinterest">Popular on Pinterest</string>
     <string name="updates">Updates</string>
     <string name="messages">Messages</string>
+
 </resources>

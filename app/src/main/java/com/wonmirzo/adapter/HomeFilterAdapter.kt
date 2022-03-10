@@ -62,7 +62,6 @@ class HomeFilterAdapter(private var context: Context, private var filters: List<
             )
             tvFilter.setTextColor(itemView.resources.getColor(R.color.white))
         }
-
-
     }
+
 }
