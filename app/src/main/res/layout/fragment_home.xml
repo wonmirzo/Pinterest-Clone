@@ -11,13 +11,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFilterHome"
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="50dp" />
+        android:layout_height="50dp"
+        android:orientation="horizontal" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPostHome"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="false"
+        android:orientation="vertical" />
 
 </LinearLayout>

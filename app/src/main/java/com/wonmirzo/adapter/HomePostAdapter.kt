@@ -1,6 +1,5 @@
 package com.wonmirzo.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,9 +7,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.imageview.ShapeableImageView
 import com.wonmirzo.R
+import com.wonmirzo.listener.OnBottomReachedListener
 import com.wonmirzo.network.model.HomePost
 
-class HomePostAdapter(private var context: Context, private var posts: ArrayList<HomePost>) :
+
+class HomePostAdapter(
+    private var posts: ArrayList<HomePost>,
+    private var listener: OnBottomReachedListener
+) :
     RecyclerView.Adapter<HomePostAdapter.VH>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomePostAdapter.VH {
         return VH(
@@ -23,7 +27,16 @@ class HomePostAdapter(private var context: Context, private var posts: ArrayList
 
         val ivPhoto = holder.ivPhoto
 
-        Glide.with(ivPhoto.context).load(post.urls!!.small).into(ivPhoto)
+        Glide.with(ivPhoto.context)
+            .load(post.urls.small)
+            .placeholder(R.drawable.ic_home)
+            .fitCenter()
+            .into(ivPhoto)
+
+
+        if (position == posts.size - 1) {
+            listener.onBottomReached(position)
+        }
     }
 
     override fun getItemCount(): Int = posts.size
