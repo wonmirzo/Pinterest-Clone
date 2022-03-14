@@ -12,7 +12,7 @@ import com.wonmirzo.model.HomeFilter
 
 class HomeFilterAdapter(private var context: Context, private var filters: List<HomeFilter>) :
     RecyclerView.Adapter<HomeFilterAdapter.VH>() {
-    private var selectedItemPos = -1
+    private var selectedItemPos = 0
     private var lastItemSelectedPos = -1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeFilterAdapter.VH =
@@ -24,6 +24,10 @@ class HomeFilterAdapter(private var context: Context, private var filters: List<
         tvFilter.text = filter.text
 
         tvFilter.setOnClickListener {
+            if (!filter.isSelected) {
+                notifyItemChanged(selectedItemPos)
+                selectedItemPos = holder.adapterPosition
+            }
             selectedItemPos = holder.adapterPosition
             lastItemSelectedPos = if (lastItemSelectedPos == -1)
                 selectedItemPos

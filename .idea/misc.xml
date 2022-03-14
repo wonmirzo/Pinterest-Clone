@@ -12,9 +12,11 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/drawable/ic_home.xml" value="0.111" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/drawable/icon_home.xml" value="0.111" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/drawable/item_selector.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/drawable/shape_bordered.xml" value="0.2735" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/drawable/shape_rounded_corners.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/layout-v23/fragment_search.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/layout/activity_details.xml" value="0.264" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/layout/activity_main.xml" value="0.22521367521367522" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/layout/fragment_chat.xml" value="0.22521367521367522" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/layout/fragment_home.xml" value="0.22236286919831225" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Pinterest Clone/app/src/main/res/layout/fragment_message.xml" value="0.27447916666666666" />

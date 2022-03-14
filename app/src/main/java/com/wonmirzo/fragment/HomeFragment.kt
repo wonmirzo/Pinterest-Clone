@@ -93,11 +93,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private fun getAllFilters(): List<HomeFilter> {
         val filters = ArrayList<HomeFilter>()
-        filters.add(HomeFilter("For You"))
-        filters.add(HomeFilter("Today"))
-        filters.add(HomeFilter("Following"))
-        filters.add(HomeFilter("Health"))
-        filters.add(HomeFilter("Recipes"))
+        filters.add(HomeFilter("For You", true))
+        filters.add(HomeFilter("Today", false))
+        filters.add(HomeFilter("Following", false))
+        filters.add(HomeFilter("Health", false))
+        filters.add(HomeFilter("Recipes", false))
         return filters
     }
 
