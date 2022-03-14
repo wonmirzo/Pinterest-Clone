@@ -1,5 +1,7 @@
 package com.wonmirzo.adapter
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,7 +31,7 @@ class HomePostAdapter(
 
         Glide.with(ivPhoto.context)
             .load(post.urls.small)
-            .placeholder(R.drawable.ic_home)
+            .placeholder(ColorDrawable(Color.parseColor(post.color)))
             .fitCenter()
             .into(ivPhoto)
 

@@ -5,12 +5,11 @@ import com.wonmirzo.network.model.HomePost
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Headers
-import retrofit2.http.Query
 import retrofit2.http.QueryMap
 
 interface PhotoService {
     @Headers("Authorization:Client-ID ${MyStrings.accessKey}")
 
     @GET("photos")
-    fun listPost(@QueryMap result: MutableMap<String, String>): Call<List<HomePost>>
+    fun listPost(@QueryMap filter: MutableMap<String, String>): Call<List<HomePost>>
 }

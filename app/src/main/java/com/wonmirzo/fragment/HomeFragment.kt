@@ -1,14 +1,9 @@
 package com.wonmirzo.fragment
 
 import android.annotation.SuppressLint
-import android.os.Build
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.annotation.RequiresApi
-import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,8 +14,8 @@ import com.wonmirzo.adapter.HomeFilterAdapter
 import com.wonmirzo.adapter.HomePostAdapter
 import com.wonmirzo.helper.SpacesItemDecoration
 import com.wonmirzo.listener.OnBottomReachedListener
-import com.wonmirzo.model.HomeFilter
 import com.wonmirzo.network.RetrofitHttp
+import com.wonmirzo.network.model.HomeFilter
 import com.wonmirzo.network.model.HomePost
 import com.wonmirzo.utils.Logger
 import retrofit2.Call
@@ -62,6 +57,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         rvPostHome.addItemDecoration(decoration)
 
         refreshFilterAdapter(getAllFilters())
+        apiFilterList()
         apiPhotoList()
         refreshPostAdapter(posts)
     }
@@ -99,6 +95,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         filters.add(HomeFilter("Health", false))
         filters.add(HomeFilter("Recipes", false))
         return filters
+    }
+
+    private fun apiFilterList() {
+
     }
 
     private fun apiPhotoList() {

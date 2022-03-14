@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.RecyclerView
 import com.wonmirzo.R
-import com.wonmirzo.model.HomeFilter
+import com.wonmirzo.network.model.HomeFilter
 
 class HomeFilterAdapter(private var context: Context, private var filters: List<HomeFilter>) :
     RecyclerView.Adapter<HomeFilterAdapter.VH>() {
